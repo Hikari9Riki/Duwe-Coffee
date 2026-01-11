@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duwe Coffee - Premium Coffee Shop</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #6f4e37 0%, #8b5a3c 100%);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 5px;
+        }
+        
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        /* Navigation */
+        nav {
+            background: #5a4033;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #d4a574;
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #6f4e37;
+            border-bottom: 3px solid #d4a574;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        /* About Section */
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .about-content h3 {
+            color: #6f4e37;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .about-content p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .delivery-info {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        .delivery-info h4 {
+            color: #6f4e37;
+            margin-bottom: 10px;
+        }
+        
+        /* Product Catalog */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+        }
+        
+        .product-image {
+            width: 100%;
+            aspect-ratio: 2/3;
+            object-fit: cover;
+            background: #e8dcc8;
+        }
+        
+        .product-info {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .product-name {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #6f4e37;
+            margin-bottom: 10px;
+        }
+        
+        .product-price {
+            font-size: 1.5em;
+            color: #d4a574;
+            font-weight: 700;
+        }
+        
+        /* Contact Section */
+        .contact-container {
+            text-align: center;
+            padding: 40px 20px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 15px 30px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+        }
+        
+        .btn-instagram {
+            background: #E4405F;
+            color: white;
+        }
+        
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+        
+        /* Footer */
+        footer {
+            background: #5a4033;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+        
+        @media (max-width: 768px) {
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+            
+            .contact-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>☕ Duwe Coffee</h1>
+        <p>Premium Coffee Experience</p>
+    </header>
+    
+    <!-- Navigation -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#catalog">Catalog</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <div class="about-container">
+            <div class="about-content">
+                <h3>How We Work</h3>
+                <p>Duwe Coffee is dedicated to bringing you the finest quality coffee beans and beverages. We source our products carefully to ensure the best taste and freshness.</p>
+                
+                <h3>Delivery Options</h3>
+                <p>We offer two convenient ways to get your coffee:</p>
+                <ul style="margin-left: 20px; margin-bottom: 15px;">
+                    <li><strong>Pickup:</strong> Visit us at our location</li>
+                    <li><strong>Cash on Delivery (COD):</strong> Order online and pay upon delivery</li>
+                </ul>
+            </div>
+            
+            <div class="delivery-info">
+                <h4>📍 Shop Location</h4>
+                <p><strong>Mahallah Uthman, Block A, Room 2.5c</strong></p>
+                
+                <h4 style="margin-top: 20px;">💰 COD Information</h4>
+                <p>COD charges are calculated based on the delivery distance. Please contact us via WhatsApp for exact shipping rates to your location.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Product Catalog -->
+    <section id="catalog">
+        <h2>Our Catalog</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="https://via.placeholder.com/400x600?text=Arabica+Coffee" alt="Arabica Coffee" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">Arabica Coffee</div>
+                    <div class="product-price">Rp 45,000</div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://via.placeholder.com/400x600?text=Robusta+Coffee" alt="Robusta Coffee" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">Robusta Coffee</div>
+                    <div class="product-price">Rp 35,000</div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://via.placeholder.com/400x600?text=Espresso+Blend" alt="Espresso Blend" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">Espresso Blend</div>
+                    <div class="product-price">Rp 50,000</div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://via.placeholder.com/400x600?text=Cold+Brew" alt="Cold Brew" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">Cold Brew</div>
+                    <div class="product-price">Rp 40,000</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-container">
+            <p>Interested in our products? Contact us now!</p>
+            <div class="contact-buttons">
+                <a href="https://wa.me/601117004754?text=Hi%20Duwe%20Coffee!%20I%20would%20like%20to%20order%20coffee.%20Can%20you%20help%20me%3F" 
+                   class="btn btn-whatsapp" target="_blank">
+                    💬 WhatsApp Us
+                </a>
+                <a href="https://instagram.com" class="btn btn-instagram" target="_blank">
+                    📸 Follow on Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Duwe Coffee. All rights reserved.</p>
+    </footer>
+</body>
+</html>
